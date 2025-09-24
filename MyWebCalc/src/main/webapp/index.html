@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fun Calculator</title>
+<style>
+/* Background */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2b40ff, #07121a);
+  background-size: 300% 300%;
+  animation: bgMove 12s infinite alternate;
+}
+
+/* Card container */
+.calculator-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  max-width: 500px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #00f7ff;
+}
+h3 {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+  width: 80%;
+  padding: 15px;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+input:focus {
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+/* Buttons */
+button {
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  margin: 8px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00f7ff, #0066ff);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6), 0 0 15px #00f7ff;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+/* Image */
+img {
+  width: 25%;
+  margin: 15px 0;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+img:hover {
+  transform: scale(1.15) rotate(2deg);
+}
+
+/* Animations */
+@keyframes bgMove {
+  0% { background-position: left top; }
+  100% { background-position: right bottom; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+  <div class="calculator-container">
+    
+    <h1>🎉 Fun Calculator 🎉</h1>
+    <h3>Do quick math with style ✨</h3>
+
+    <form action="MyServlet">
+      <input name="num1" placeholder="Enter First Number">
+      <input name="num2" placeholder="Enter Second Number"><br>
+      <button name="bt1" value="1">➕</button>
+      <button name="bt1" value="2">➖</button>
+      <button name="bt1" value="3">✖️</button>
+      <button name="bt1" value="4">➗</button>
+    </form>
+  </div>
+
+</body>
+</html>
